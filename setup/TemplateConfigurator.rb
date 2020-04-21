@@ -187,7 +187,7 @@ module Pod
       `rm -f .gitignore`
       `rm -f .travis.yml`
       `rm -f _Pods.xcodeproj`
-      `rm -f LICENSE`
+      # `rm -f LICENSE`
       `rm -f README.md`
       #`rm -f #{pod_name}/Classes/Name.swift`
       
