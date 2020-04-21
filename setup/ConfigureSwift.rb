@@ -54,7 +54,7 @@ module Pod
 
       # There has to be a single file in the Classes dir
       # or a framework won't be created
-      `touch Pod/Classes/Name.swift`
+      `touch Pod/Classes/Module.swift`
       #`cp ./setup/test_examples/xctest.swift Pod/Tests/Tests.swift`
  
       # The Podspec should be 8.0 instead of 7.0

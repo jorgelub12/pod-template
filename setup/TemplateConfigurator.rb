@@ -175,6 +175,7 @@ module Pod
       FileUtils.mv "POD_README.md", "README.md"
       FileUtils.mv "POD_LICENSE", "LICENSE"
       FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
+      FileUtils.mv "#{pod_name}/Classes/Name.swift", "#{pod_name}/Classes/#{pod_name}Module.swift"
     end
 
     def rename_classes_folder
@@ -188,6 +189,7 @@ module Pod
       `rm -f _Pods.xcodeproj`
       `rm -f LICENSE`
       `rm -f README.md`
+      `rm -f #{pod_name}/Classes/Name.swift`
       
       ## Change name inside project
       moduleName = @pod_name
