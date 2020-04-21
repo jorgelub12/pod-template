@@ -191,8 +191,7 @@ module Pod
       `rm -f README.md`
       #`rm -f #{pod_name}/Classes/Name.swift`
       
-      `ls`
-      `cd #{pod_name} > ls`
+      `mv #{pod_name}/Classes/Module.swift Mymod.swift`
       
       ## Change name inside project
       moduleName = @pod_name
