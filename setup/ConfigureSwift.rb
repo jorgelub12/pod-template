@@ -39,6 +39,8 @@ module Pod
               configurator.add_pod_to_podfile "Nimble-Snapshots' , '~> 6.3.0"
           end
       end
+      
+      `cp ./setup/test_examples/xctest.swift Pod/Tests/Tests.swift`
 
       Pod::ProjectManipulator.new({
         :configurator => @configurator,
@@ -53,7 +55,7 @@ module Pod
       # There has to be a single file in the Classes dir
       # or a framework won't be created
       `touch Pod/Classes/Name.swift`
-      `cp ./setup/test_examples/xctest.swift Pod/Tests/Tests.swift`
+      #`cp ./setup/test_examples/xctest.swift Pod/Tests/Tests.swift`
  
       # The Podspec should be 8.0 instead of 7.0
       text = File.read("NAME.podspec")
