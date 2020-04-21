@@ -185,6 +185,9 @@ module Pod
       `rm -rf .git`
       `rm -f .gitignore`
       `rm -f .travis.yml`
+      `rm -f _Pods.xcodeproj`
+      `rm -f LICENSE`
+      `rm -f README.md`
       
       ## Change name inside project
       moduleName = @pod_name
