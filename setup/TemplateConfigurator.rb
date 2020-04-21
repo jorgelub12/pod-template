@@ -183,8 +183,14 @@ module Pod
 
     def reinitialize_git_repo
       `rm -rf .git`
-#      `git init`
-#      `git add -A`
+      `rm -f .gitignore`
+      `rm -f .travis.yml`
+      
+      ## Change name inside project
+      moduleName = @pod_name
+      text = File.read("#{pod_name}/Tests/Tests.swift")
+      text = text.gsub("PROJECT", moduleName)
+      File.open("#{pod_name}/Tests/Tests.swift", "w") { |file| file.puts text }
     end
 
     def validate_user_details
